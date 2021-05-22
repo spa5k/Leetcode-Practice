@@ -9,6 +9,7 @@ const anagram = (str1, str2) => {
     let letter = str1[i];
     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
   }
+  console.log(lookup);
 
   for (let i = 0; i < str2.length; i++) {
     let letter = str2[i];
@@ -18,7 +19,7 @@ const anagram = (str1, str2) => {
       lookup[letter] -= 1;
     }
   }
-
+  console.log(lookup);
   return true;
 };
 
