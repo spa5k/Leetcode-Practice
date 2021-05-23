@@ -1,38 +1,35 @@
-const songs = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// * Algo problem: list of songs, playNext() to implement, with few constraints
-// ?[- Play randomly - don't play already played songs - O(1) extra space allowed - don't delete elements from list]-- - Took 30 + minutes to solve with O(n) time complexity, expecting O(1).
+const alreadyUsed = [];
 
-const alreadyPlayed = [];
-
-const playNext = () => {
-  if (alreadyPlayed.length === songs.length) {
-    return "You have already played everything mate";
+const useNext = () => {
+  if (alreadyUsed.length === numbers.length) {
+    return "You have already used everything mate";
   }
 
-  const randomNumber = Math.floor(Math.random() * songs.length);
+  const randomNumber = Math.floor(Math.random() * numbers.length);
   // If its already played, generate random number again
 
-  if (alreadyPlayed.includes(songs[randomNumber])) {
-    return playNext();
+  if (alreadyUsed.includes(numbers[randomNumber])) {
+    return useNext();
   }
-  alreadyPlayed.push(songs[randomNumber]);
-  return songs[randomNumber];
+  alreadyUsed.push(numbers[randomNumber]);
+  return numbers[randomNumber];
 };
 
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
-console.log(playNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
+console.log(useNext());
