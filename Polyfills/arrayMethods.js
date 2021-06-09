@@ -4,7 +4,7 @@ a.pop();
 console.log(a);
 a.shift();
 console.log(a);
-a.unshift();
+a.unshift(234);
 console.log(a);
 
 a.splice(0, 2);

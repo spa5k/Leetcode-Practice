@@ -135,20 +135,57 @@ class LinkedList {
   // Print list data
 
   printListData() {
+    let x = [];
     let current = this.head;
     while (current) {
+      x.push([current.data]);
       console.log(current.data);
       current = current.next;
+    }
+    return x;
+  }
+
+  reverseList() {
+    let prev; // previous element current.prev
+    let current = this.head; // current element
+    let next; // next element, current.next;
+
+    // as long as current exists
+    while (current) {
+      // set next element to next of current;
+      next = current.next;
+      // make current.next=prev === making it null in first change;
+      current.next = prev;
+      // make previous = current;
+      prev = current;
+      // set current to next which was current.next
+      current = next;
+    }
+    this.head = prev;
+  }
+
+  // rotate a linked list n number of times;
+  rotate(n) {
+    while (n > 0) {
+      this.reverseList();
+      n--;
     }
   }
 }
 
 const ll = new LinkedList();
+ll.insertFirst(300);
+ll.insertFirst(200);
 ll.insertFirst(100);
-ll.insertLast(400);
-ll.insertAt(200, 2);
+// ll.insertLast(400);
+// ll.insertAt(200, 2);
 // ll.removeAt(2);
-ll.removeFirst();
+// ll.removeFirst();
+console.log(ll.printListData());
 // ll.removeLast();
 // ll.clearList()
-ll.printListData();
+console.log(ll);
+// reverse the linked List;
+ll.reverseList();
+ll.rotate(1);
+console.log(ll.printListData());

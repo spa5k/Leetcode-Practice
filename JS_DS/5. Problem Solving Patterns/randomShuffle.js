@@ -8,11 +8,11 @@ const useNext = () => {
   }
 
   const randomNumber = Math.floor(Math.random() * numbers.length);
-  // If its already played, generate random number again
 
   if (alreadyUsed.includes(numbers[randomNumber])) {
     return useNext();
-  }
+  };
+
   alreadyUsed.push(numbers[randomNumber]);
   return numbers[randomNumber];
 };
@@ -22,14 +22,7 @@ console.log(useNext());
 console.log(useNext());
 console.log(useNext());
 console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
-console.log(useNext());
+
+
+
+// randomNumber();
