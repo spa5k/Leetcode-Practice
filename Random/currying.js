@@ -2,8 +2,8 @@
 //   return x * y;
 // };
 
-let multiply = function (x) {
-  return function (y) {
+let multiply = function(x) {
+  return function(y) {
     console.log(x);
     console.log(y);
     console.log(x * y);

@@ -11,7 +11,7 @@ const useNext = () => {
 
   if (alreadyUsed.includes(numbers[randomNumber])) {
     return useNext();
-  };
+  }
 
   alreadyUsed.push(numbers[randomNumber]);
   return numbers[randomNumber];
@@ -22,7 +22,5 @@ console.log(useNext());
 console.log(useNext());
 console.log(useNext());
 console.log(useNext());
-
-
 
 // randomNumber();

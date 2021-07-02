@@ -5,13 +5,13 @@ const logicAlbums = [
   "Under Pressure",
 ];
 
-const withReduce = logicAlbums.reduce(function (a, b) {
+const withReduce = logicAlbums.reduce(function(a, b) {
   return a + " , " + b;
 }, "Young Sinatra"); // Here we are initialising the array with value as 'Young Sinatra'
 
 console.log(withReduce);
 
-Array.prototype.albumReduce = function (callback, initialValue) {
+Array.prototype.albumReduce = function(callback, initialValue) {
   let accumulator = initialValue === undefined ? undefined : initialValue;
   console.log(accumulator);
   for (let i = 0; i < this.length; i++) {
@@ -26,7 +26,7 @@ Array.prototype.albumReduce = function (callback, initialValue) {
   return accumulator;
 };
 
-const newReduce = logicAlbums.albumReduce(function (a, b) {
+const newReduce = logicAlbums.albumReduce(function(a, b) {
   return a + " , " + b;
 }, "Young ");
 

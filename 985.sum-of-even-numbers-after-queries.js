@@ -11,7 +11,5 @@
  * @return {number[]}
  */
 var sumEvenAfterQueries = function(nums, queries) {
-    
 };
 // @lc code=end
-

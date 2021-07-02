@@ -10,7 +10,7 @@
  * @param {number} k
  * @return {number}
  */
-var findMaxAverage = function (nums, k) {
+var findMaxAverage = function(nums, k) {
   let highestNum = -Infinity;
   let sum = 0;
   for (let i = 0; i <= nums.length; i++) {

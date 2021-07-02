@@ -57,7 +57,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var numIdenticalPairs = function (nums) {
+var numIdenticalPairs = function(nums) {
   let result = 0;
   nums.forEach((number, index) => {
     index = nums.indexOf(number, index + 1);

@@ -10,7 +10,7 @@
  * @param {number} k
  * @return {number[]}
  */
-var addToArrayForm = function (A, K) {
+var addToArrayForm = function(A, K) {
   let flag = A.length - 1;
   while (K) {
     if (flag < 0) {

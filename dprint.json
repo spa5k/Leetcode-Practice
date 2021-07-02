@@ -3,17 +3,11 @@
   "projectType": "openSource",
   "incremental": true,
   "indentWidth": 2,
-  "typescript": {
-  },
-  "json": {
-  },
-  "markdown": {
-  },
+  "typescript": {},
+  "json": {},
+  "markdown": {},
   "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md}"],
-  "excludes": [
-    "**/node_modules",
-    "**/*-lock.json"
-  ],
+  "excludes": ["**/node_modules", "**/*-lock.json"],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.46.0.wasm",
     "https://plugins.dprint.dev/json-0.12.0.wasm",
