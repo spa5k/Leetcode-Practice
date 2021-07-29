@@ -72,7 +72,7 @@
  * @param {number} extraCandies
  * @return {boolean[]}
  */
-var kidsWithCandies = function(candies, extraCandies) {
+var kidsWithCandies = function (candies, extraCandies) {
   let arr = [];
   const max = Math.max(...candies);
   for (candy in candies) {

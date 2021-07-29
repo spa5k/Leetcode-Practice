@@ -3,7 +3,7 @@ const abc = (timeout) => {
     resolve(
       setTimeout(() => {
         console.log("wait a min1");
-      }, timeout),
+      }, timeout)
     );
   });
 };

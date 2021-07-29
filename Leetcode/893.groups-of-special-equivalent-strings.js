@@ -88,7 +88,7 @@
  * @param {string[]} A
  * @return {number}
  */
-var numSpecialEquivGroups = function(A) {
+var numSpecialEquivGroups = function (A) {
   const groups = new Set();
 
   for (const word of A) {

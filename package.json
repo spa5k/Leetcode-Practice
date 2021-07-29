@@ -5,13 +5,13 @@
   "main": "1013.partition-array-into-three-parts-with-equal-sum.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "dprint fmt"
+    "format": "prettier --write ."
   },
   "repository": "git@github.com-Unbuttun:Unbuttun/Leetcode-Practice.git",
   "keywords": [],
   "author": "UnButtun <Unbuttun@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "dprint": "^0.15.3"
+    "prettier": "^2.3.2"
   }
 }

@@ -9,7 +9,7 @@ albums.forEach((currentValue, index, array) => {
   // console.log(array);
 });
 
-Array.prototype.eachAlbum = function(callback) {
+Array.prototype.eachAlbum = function (callback) {
   // callback here is the callback function
   // which actual .forEach() function accepts
   console.log(this);

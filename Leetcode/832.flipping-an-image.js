@@ -67,6 +67,5 @@
  * @param {number[][]} image
  * @return {number[][]}
  */
-var flipAndInvertImage = function(image) {
-};
+var flipAndInvertImage = function (image) {};
 // @lc code=end

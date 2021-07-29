@@ -16,7 +16,7 @@ logicAlbums.filter((album) => {
 });
 console.log(logicAlbums);
 
-Array.prototype.myFilter = function(callback) {
+Array.prototype.myFilter = function (callback) {
   let arr = [];
   for (let i = 0; i < this.length; i++) {
     console.log(callback(this[i], i, this), this[i]);
