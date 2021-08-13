@@ -5,20 +5,10 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"dprint@npm:^0.15.3":
-  version: 0.15.3
-  resolution: "dprint@npm:0.15.3"
-  bin:
-    dprint: bin.js
-  checksum: 34c73db70b5f6a26344e2acb867093d1724f879837478493d23d0e23f6655d38541c0925e985e4b6e2e3eb27bd0a116ebc54796db9018e1e8fb0112d02bda8a3
-  languageName: node
-  linkType: hard
-
 "leetcode-practice@workspace:.":
   version: 0.0.0-use.local
   resolution: "leetcode-practice@workspace:."
   dependencies:
-    dprint: ^0.15.3
     prettier: ^2.3.2
   languageName: unknown
   linkType: soft
