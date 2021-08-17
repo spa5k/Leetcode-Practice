@@ -3,7 +3,7 @@
 
 __metadata:
   version: 4
-  cacheKey: 7
+  cacheKey: 8
 
 "leetcode-practice@workspace:.":
   version: 0.0.0-use.local
@@ -18,6 +18,6 @@ __metadata:
   resolution: "prettier@npm:2.3.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 4fd89a7f6a12b13456d359fba2b1dd0fc0a17cf33f8f15953ab9f43b21ea9b09b5a2861d63b558ca0577274ce606d390e70628cf93e26d19d6cb7f19c9eebc31
+  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
   languageName: node
   linkType: hard
