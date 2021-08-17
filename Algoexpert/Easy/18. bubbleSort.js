@@ -1,3 +1,5 @@
+// Time - O(n^2) | Space - O(1)
+
 const bubbleSort = (array) => {
   let isSorted = false;
   let counter = 0;
