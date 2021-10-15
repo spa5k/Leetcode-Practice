@@ -19,7 +19,7 @@ const transpose = (sudokoGrid) => {
   return sudokoGrid.map((col, i) => sudokoGrid.map((row) => row[i]));
 };
 
-//TODO refactor this horror show
+// TODO refactor this horror show
 const getRegions = (sudokoGrid) => {
   let one = [];
   let two = [];
