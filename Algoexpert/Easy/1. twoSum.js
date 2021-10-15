@@ -41,9 +41,9 @@ const twoSumTwoPointer = (array, target) => {
   while (left < right) {
     const currentSum = arr[left] + arr[right];
     if (currentSum === target) {
-      // arrayCollection.push();
       return [arr[left], arr[right]];
-    } else if (currentSum < target) {
+    }
+    if (currentSum < target) {
       left += 1;
     } else if (currentSum > target) {
       right -= 1;
