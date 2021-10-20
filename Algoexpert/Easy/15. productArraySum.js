@@ -3,11 +3,9 @@
 const productArraySum = (arr, depth = 1) => {
   let sum = 0;
   arr.map((element) => {
-    if (Array.isArray(element)) {
-      sum += productArraySum(element, depth + 1);
-    } else {
-      sum += lement;
-    }
+    sum += Array.isArray(element)
+      ? productArraySum(element, depth + 1)
+      : element;
   });
   return sum * depth;
 };
