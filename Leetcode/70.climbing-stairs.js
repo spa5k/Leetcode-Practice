@@ -10,15 +10,9 @@
  * @return {number}
  */
 const climbStairs = (n) => {
-  let previous = 1;
-  let current = 2;
-  let tmp;
+  let onlyOneSteps = n;
+  let onlyTwoSteps = Math.floor(n / 2);
 
-  for (let index = 3; index <= n; index++) {
-    tmp = previous;
-    prev = current;
-    current += tmp;
-  }
-  return current;
+  return onlyOneSteps + onlyTwoSteps;
 };
 // @lc code=end
