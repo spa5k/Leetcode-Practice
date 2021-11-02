@@ -7,19 +7,13 @@
 # @lc code=start
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        slow, fast = 0, 0
-        while True:
-            slow = nums[slow]
-            fast = nums[nums[fast]]
+        for num in nums:
+            absValue = abs(num)
 
-            if slow == fast:
-                break
-        slow2 = 0
-        while True:
-            slow = nums[slow]
-            slow2 = nums[slow2]
+            if nums[absValue-1] < 0:
+                return absValue
 
-            if slow == slow2:
-                return slow
+            nums[absValue-1] *= -1
+        return -1
 
 # @lc code=end
