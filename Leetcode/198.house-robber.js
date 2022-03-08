@@ -14,7 +14,7 @@ const rob = (nums) => {
   let rob2 = 0;
 
   for (const element of nums) {
-    let temp = Math.max(element + rob1, rob2);
+    const temp = Math.max(element + rob1, rob2);
     rob1 = rob2;
     rob2 = temp;
   }
