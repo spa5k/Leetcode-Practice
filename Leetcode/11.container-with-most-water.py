@@ -8,20 +8,20 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         left = 0
-        right = len(height)-1
+        right = len(height) - 1
 
-        res = 0
+        max_area = min(height[left], height[right]) * (right - left)
 
         while left < right:
-            area = (right-left)*min(height[left], height[right])
-
-            res = max(res, area)
+            current_area = min(height[left], height[right]) * (right - left)
+            max_area = max(current_area, max_area)
 
             if height[left] < height[right]:
                 left += 1
             else:
                 right -= 1
-        return res
+
+        return max_area
 
 
 # @lc code=end
