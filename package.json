@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write ."
   },
-  "repository": "git@github.com-Unbuttun:Unbuttun/Leetcode-Practice.git",
+  "repository": "git@github.com-spa5k:spa5k/Leetcode-Practice.git",
   "keywords": [],
-  "author": "UnButtun <Unbuttun@gmail.com>",
+  "author": "spa5k <spa5k@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.3.2"
