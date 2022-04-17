@@ -12,7 +12,6 @@
   "author": "spa5k <spa5k@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^2.3.2"
-  },
-  "packageManager": "yarn@3.0.1"
+    "prettier": "^2.6.2"
+  }
 }
