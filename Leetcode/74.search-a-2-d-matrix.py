@@ -50,24 +50,26 @@
 #
 
 # @lc code=start
+from typing import List
+
+
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
 
         for row in matrix:
-            left = 0
-            right = len(row)-1
+            l = 0
+            r = len(row) - 1
+            if row[r] >= target and row[l] <= target:
 
-            if row[left] <= target <= row[right]:
-                while left <= right:
-                    # it means that the value is inside
-                    middle = (left+right)//2
+                while l <= r:
+                    m = (l + r) // 2
 
-                    if target == row[middle]:
+                    if row[m] == target:
                         return True
-
-                    if target < row[middle]:
-                        right = middle-1
+                    if row[m] < target:
+                        l = m + 1
                     else:
-                        left = middle+1
+                        r = m - 1
 
-                        # @lc code=end
+
+# @lc code=end

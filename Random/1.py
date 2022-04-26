@@ -11,9 +11,7 @@ def solution(message, k):
         ans += word
         ans += " "
 
-    if (len(ans) > 0):
-      # remove last character because it's a space
-      ans = ans[:-1]
+    if len(ans) > 0:
+        # remove last character because it's a space
+        ans = ans[:-1]
     return ans
-
-
