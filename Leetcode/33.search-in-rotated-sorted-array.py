@@ -52,27 +52,33 @@
 #
 
 # @lc code=start
+from typing import List
+
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        left = 0
-        right = len(nums)-1
+        l = 0
+        r = len(nums)-1
 
-        while left <= right:
-            middle = (left+right)//2
+        while l <= r:
+            mid = (l+r)//2
+            if nums[mid] == target:
+                return mid
 
-            if target == nums[middle]:
-                return middle
-
-            if nums[left] <= nums[middle]:
-                # if target is greater than middle, or target is less than left most value.
-                if target > nums[middle] or target < nums[left]:
-                    left = middle+1
+            # left sorted area
+            if nums[mid] >= nums[l]:
+                # if target is greater than middle
+                # or is target is less than left most portion
+                # it means we need to search on right
+                if target > nums[mid] or target < nums[l]:
+                    l = mid+1
                 else:
-                    right = middle-1
+                    r = mid-1
             else:
-                if target < nums[middle] or target > nums[right]:
-                    right = middle-1
+                if target < nums[mid] or target > nums[r]:
+                    r = mid-1
                 else:
-                    left = middle+1
+                    l = mid+1
         return -1
+
 # @lc code=end
