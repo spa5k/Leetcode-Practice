@@ -9,5 +9,11 @@
       "name": "Leetcode"
     }
   ],
-  "settings": {}
+  "settings": {
+    "files.associations": {
+      "*.json": "jsonc",
+      "*.py": "python",
+      "iostream": "cpp"
+    }
+  }
 }
