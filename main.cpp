@@ -1,53 +1,33 @@
-#include <iostream>
-using namespace  std;
-#include <vector>
 struct TreeNode
 {
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode() : val(0), left(nullptr), right(nullptr) {}
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 class Solution
 {
 public:
-  bool findTarget(TreeNode *root, int k)
-  {
-    if (!root)
-      return false;
-    vector<int> traversal;
-    inorder(root, traversal);
-    int left = 0;
-    int right = traversal.size() - 1;
-
-    while (left < right)
-    {
-      if (traversal
-                  [left] +
-              traversal[right] ==
-          k)
-      {
-        return true;
-      }
-      else if (traversal[left] + traversal[right] > k)
-      {
-        /* code */
-        right--;
-      }
-      else
-      {
-        left++;
-      }
+    int dfs(TreeNode*root, int max_val) {
+        if (!root) {
+            return 0;
+        }
+        int res;
+        if(root->val >=max_val) {
+            res=1;
+        } else {
+            res=0;
+        }
+        max_val=max(max_val, root->val);
+        res+= dfs(root->left, max_val);
+        res+=dfs(root->right,max_val);
+        return res;
     }
-  }
-  void inorder(TreeNode *root, vector<int> &traversal)
-  {
-    if (!root)
-      return;
-    inorder(root->left, traversal);
-    traversal.push_back(root->val);
-    inorder(root->right, traversal);
-  }
+public:
+    int goodNodes(TreeNode *root)
+    {
+        return dfs(root,root->val);
+    }
 };
