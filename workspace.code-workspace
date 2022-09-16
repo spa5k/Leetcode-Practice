@@ -26,7 +26,10 @@
       "xstring": "cpp",
       "xutility": "cpp",
       "xlocinfo": "cpp",
-      "xlocale": "cpp"
+      "xlocale": "cpp",
+      "ostream": "cpp",
+      "unordered_set": "cpp",
+      "queue": "cpp"
     }
   }
 }
