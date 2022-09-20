@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.23)
-project(Leetcode)
 
-set(CMAKE_CXX_STANDARD 14)
+project(LeetCode VERSION 1.0)
 
-include_directories(.)
+set (CMAKE_CXX_STANDARD 17)
 
-add_executable(Leetcode
- 
-        1337.the-k-weakest-rows-in-a-matrix.cpp
-        )
+include_directories(PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+enable_testing()
+add_subdirectory(tests)

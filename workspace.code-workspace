@@ -29,7 +29,10 @@
       "xlocale": "cpp",
       "ostream": "cpp",
       "unordered_set": "cpp",
-      "queue": "cpp"
+      "queue": "cpp",
+      "stack": "cpp",
+      "xstddef": "cpp",
+      "utility": "cpp"
     }
   }
 }
