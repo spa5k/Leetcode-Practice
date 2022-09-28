@@ -1,9 +1,5 @@
 // @before-stub-for-debug-begin
-#include <vector>
-#include <string>
-#include "commoncppproblem200.h"
-
-using namespace std;
+#include <headers.h>
 // @before-stub-for-debug-end
 
 /*
