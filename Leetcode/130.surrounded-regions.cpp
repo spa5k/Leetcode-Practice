@@ -79,6 +79,7 @@ public:
       return;
     }
     int rows = board[0].size();
+
     for (int i = 0; i < columns; i++)
     {
       if (board[i][0] == 'O')
