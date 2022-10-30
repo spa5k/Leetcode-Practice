@@ -84,8 +84,7 @@ public:
   int numDecodings(string s)
   {
     int n = s.size();
-    unordered_map<int, int> dp;
-
+    vector<int> dp(n + 1);
     dp[n] = 1;
     for (int i = n - 1; i >= 0; i--)
     {

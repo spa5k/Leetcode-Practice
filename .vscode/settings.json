@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.json": "jsonc",
+    "*.py": "python",
+    "string": "cpp",
+    "vector": "cpp",
+    "xstring": "cpp"
+  }
+}
