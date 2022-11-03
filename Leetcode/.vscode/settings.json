@@ -1,0 +1,14 @@
+{
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.filePath": {
+    "default": {
+      "filename": "${id}.${kebab-case-name}.${ext}",
+      "folder": ""
+    }
+  },
+  "leetcode.hint.commandShortcut": false,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.showDescription": "Both",
+  "leetcode.workspaceFolder": "F:\\Leetcode-Practice\\Leetcode",
+}
