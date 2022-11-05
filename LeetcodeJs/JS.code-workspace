@@ -3,5 +3,16 @@
     {
       "path": ".."
     }
-  ]
+  ],
+  "settings": {
+    "files.associations": {
+      "*.json": "jsonc",
+      "*.py": "python",
+      "vector": "cpp",
+      "xstring": "cpp",
+      "xutility": "cpp",
+      "algorithm": "cpp",
+      "utility": "cpp"
+    }
+  }
 }
