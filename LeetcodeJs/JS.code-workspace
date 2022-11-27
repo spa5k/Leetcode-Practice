@@ -12,7 +12,8 @@
       "xstring": "cpp",
       "xutility": "cpp",
       "algorithm": "cpp",
-      "utility": "cpp"
+      "utility": "cpp",
+      "limits": "cpp"
     }
   }
 }
