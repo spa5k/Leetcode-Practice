@@ -67,6 +67,5 @@
  * @param {string} s
  * @return {string}
  */
-const greatestLetter = (s) => {
-};
+const greatestLetter = (s) => {};
 // @lc code=end

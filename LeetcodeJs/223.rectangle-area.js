@@ -69,6 +69,6 @@ const computeArea = (ax1, ay1, ax2, ay2, bx1, by1, bx2, by2) => {
 
   const overlapx = Math.max(Math.min(ax2, bx2) - Math.max(ax1, bx1), 0);
   const overlapy = Math.max(Math.min(ay2, by2) - Math.max(ay1, by1), 0);
-  return area1 + area2 - (overlapx * overlapy);
+  return area1 + area2 - overlapx * overlapy;
 };
 // @lc code=end

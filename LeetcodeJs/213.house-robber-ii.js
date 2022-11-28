@@ -66,7 +66,6 @@
  * @return {number}
  */
 const rob = (nums) => {
-  const helper = () => {
-  };
+  const helper = () => {};
 };
 // @lc code=end

@@ -72,7 +72,7 @@
  * @param {string[]} words
  * @return {number}
  */
-const reverse = str => str.split("").reverse().join("");
+const reverse = (str) => str.split("").reverse().join("");
 
 const longestPalindrome = (words) => {
   const obj = {};
@@ -89,7 +89,9 @@ const longestPalindrome = (words) => {
     }
   }
 
-  const hashGotMorePalindromes = Object.keys(obj).filter(str => obj[str] && reverse(str) === str);
+  const hashGotMorePalindromes = Object.keys(obj).filter(
+    (str) => obj[str] && reverse(str) === str
+  );
 
   if (hashGotMorePalindromes.length) counter += 2;
 
