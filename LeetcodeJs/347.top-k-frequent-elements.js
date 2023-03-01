@@ -1,16 +1,16 @@
 /*
- * @lc app=leetcode id=347 lang=cpp
+ * @lc app=leetcode id=347 lang=javascript
  *
  * [347] Top K Frequent Elements
  *
  * https://leetcode.com/problems/top-k-frequent-elements/description/
  *
  * algorithms
- * Medium (64.87%)
- * Likes:    11130
- * Dislikes: 416
- * Total Accepted:    1.2M
- * Total Submissions: 1.8M
+ * Medium (64.35%)
+ * Likes:    12779
+ * Dislikes: 473
+ * Total Accepted:    1.3M
+ * Total Submissions: 2.1M
  * Testcase Example:  '[1,1,1,2,2,3]\n2'
  *
  * Given an integer array nums and an integer k, return the k most frequent
@@ -39,30 +39,28 @@
  * where n is the array's size.
  *
  */
-#include <headers.h>
+
 // @lc code=start
-class Solution
-{
-public:
-  vector<int> topKFrequent(vector<int> &nums, int k)
-  {
-    vector<int> res{};
-    priority_queue<pair<int, int>> pq{};
-    unordered_map<int, int> mp{};
-    for (auto num : nums)
-    {
-      mp[num]++;
-    }
-    for (auto &&i : mp)
-    {
-      pq.push({i.second, i.first});
-    }
-    for (int i = 0; i < k; i++)
-    {
-      res.push_back(pq.top().second);
-      pq.pop();
-    }
-    return res;
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+var topKFrequent = function (nums, k) {
+  const map = new Map();
+  const res = [];
+  for (const num of nums) {
+    const existingFreq = map.get(num) + 1 || 1;
+    map.set(num, existingFreq);
   }
+
+  let sortedArray = [...map.entries()].sort((a, b) => b[1] - a[1]);
+  for (let index = 0; index < k; index++) {
+    res.push(sortedArray[index][0]);
+  }
+  return res;
 };
 // @lc code=end
+
+topKFrequent([1, 2, 3, 4]);
+
