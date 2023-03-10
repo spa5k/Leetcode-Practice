@@ -7,10 +7,12 @@
 #include <algorithm>
 #include <map>
 #include <set>
+#include <list>
 #include <unordered_set>
 #include <unordered_map>
 #include <stack>
 #include <queue>
+#include <numeric>
 // c libraries
 #include <cctype>
 #include <climits>
