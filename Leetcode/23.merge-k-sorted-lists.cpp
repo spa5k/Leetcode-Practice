@@ -95,8 +95,8 @@ public:
         pq.push({list->val, list});
       }
     }
-    ListNode *head = nullptr;
-    ListNode *tmp;
+    ListNode *head = NULL;
+    ListNode *temp;
     while (!pq.empty())
     {
       auto p = pq.top();
@@ -107,9 +107,9 @@ public:
       }
       else
       {
-        tmp->next = p.second;
+        temp->next = p.second;
       }
-      tmp = p.second;
+      temp = p.second;
       if (p.second->next)
       {
         pq.push({p.second->next->val, p.second->next});

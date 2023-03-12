@@ -37,6 +37,7 @@
   "files.associations": {
     "*.json": "jsonc",
     "*.py": "python",
-    "numeric": "cpp"
+    "numeric": "cpp",
+    "limits": "cpp"
   }
 }
