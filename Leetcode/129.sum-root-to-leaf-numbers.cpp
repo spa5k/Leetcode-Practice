@@ -1,10 +1,4 @@
-// @before-stub-for-debug-begin
-#include <vector>
-#include <string>
-#include "commoncppproblem129.h"
 
-using namespace std;
-// @before-stub-for-debug-end
 
 /*
  * @lc app=leetcode id=129 lang=cpp
@@ -68,7 +62,24 @@ using namespace std;
  *
  *
  */
-
+struct TreeNode
+{
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode() : val(0), left(nullptr), right(nullptr) {}
+  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+  TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+struct ListNode
+{
+  int val;
+  ListNode *next;
+  ListNode() : val(0), next(nullptr) {}
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+#include <headers.h>
 // @lc code=start
 /**
  * Definition for a binary tree node.
@@ -119,6 +130,36 @@ using namespace std;
 //     return right + left;
 //   }
 // };
+// class Solution
+// {
+// public:
+//   int res = 0;
+
+// public:
+//   int sumNumbers(TreeNode *root)
+//   {
+//     helper(root, res);
+//     return res;
+//   }
+//   void helper(TreeNode *node, int curr)
+//   {
+//     if (!node)
+//       return;
+
+//     curr = curr * 10 + node->val;
+//     if (!node->left && !node->right)
+//     {
+//       // This is
+//       res += curr;
+//       return;
+//     }
+
+//     helper(node->left, curr);
+
+//     helper(node->right, curr);
+//   }
+// };
+
 class Solution
 {
 public:
@@ -128,25 +169,22 @@ public:
   int sumNumbers(TreeNode *root)
   {
     helper(root, res);
-    cout << res;
     return res;
   }
   void helper(TreeNode *node, int curr)
   {
     if (!node)
+    {
       return;
-
-    curr = curr * 10 + node->val;
+    }
+    curr = node->val + curr * 10;
     if (!node->left && !node->right)
     {
-      // This is
       res += curr;
       return;
     }
-
-    helper(node->left, curr);
-
     helper(node->right, curr);
+    helper(node->left, curr);
   }
 };
 
